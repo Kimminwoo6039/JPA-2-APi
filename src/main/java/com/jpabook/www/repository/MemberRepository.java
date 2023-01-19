@@ -20,7 +20,7 @@ public class MemberRepository {
     }
 
     public List<Member> findAll() {
-        return em.createQuery("select m from Member m", Member.class).getResultList(); // JPA 쿼리실행문 엔티티객체 조회함,sql 테이블
+        return em.createQuery("select m from Member m", Member.class).getResultList(); // JPA 쿼리실행문 엔티티객체 조회함,sql 테이블1
     }
 
     public List<Member> findByName(String name) {
