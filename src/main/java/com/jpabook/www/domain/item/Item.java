@@ -12,7 +12,7 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE) // 한테이블에 때려박아서 돌림 앨범 무비
 @DiscriminatorColumn(name = "dtype") // dtpe 이란걸 사용함
-@Getter
+@Getter @Setter
 // Setter 를 사용하지않고 메소드를 사용해..작성
 public abstract class Item { // 추상클래스
 

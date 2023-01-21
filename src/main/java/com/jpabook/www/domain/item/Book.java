@@ -9,7 +9,7 @@ import javax.persistence.Entity;
 @Entity
 @DiscriminatorValue("B") // 상속
 @Getter @Setter
-public class Book extends Item{
+public class Book extends Item {
 
     private String author;
 

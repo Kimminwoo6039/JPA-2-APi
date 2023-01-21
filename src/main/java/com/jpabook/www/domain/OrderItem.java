@@ -1,13 +1,16 @@
 package com.jpabook.www.domain;
 
 import com.jpabook.www.domain.item.Item;
+import lombok.AccessLevel;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED) // 기본생성자를 사용하지말고 protected 를 사용해랑
 public class OrderItem {
 
     @Id @GeneratedValue
