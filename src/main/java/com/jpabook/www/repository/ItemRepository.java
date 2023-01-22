@@ -16,7 +16,7 @@ public class ItemRepository {
     public void save(Item item) { // 아이템은 처음에 데이터가 없음
        if (item.getId() == null) {
            em.persist(item);
-       } else {
+       } else {  // 위험한 방법임..변경감지를 사용 merget 보다는 ㅎ
            em.merge(item);  // update 비슷한거임
        }
     }
