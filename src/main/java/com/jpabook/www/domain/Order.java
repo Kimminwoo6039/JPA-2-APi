@@ -21,7 +21,7 @@ public class Order {
     @Column(name = "order_id")
     private Long id;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.LAZY) // 지연로딩이란 == > 오더만 가져오는거임 ..
     @JoinColumn(name = "member_id") // pk 키 member_id
     private Member member;
 

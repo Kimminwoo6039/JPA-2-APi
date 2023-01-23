@@ -31,7 +31,7 @@ logging:
 
 
 server:
-  port: 8081
+  port: 8080
 
 #테이블명 변경가능
 #spring.jpa.hibernate.naming.implicit-strategy:
