@@ -18,7 +18,8 @@ spring:
       hibernate:
 #       show_sql: true
         format_sql: true
-
+        default_batch_fetch_size: 100   # 쿼리중에서 in() 쿼리를 몇개로 할껀지 항상 켜두는걸 해야줘야함
+    open-in-view: true  # true 일시 다끝날때까지 커넥션 가지고잇음 false 하면 실시간트래픽 커버가능 하지만 지연로딩이 안됨.
 
 # 로깅 (logging)
 

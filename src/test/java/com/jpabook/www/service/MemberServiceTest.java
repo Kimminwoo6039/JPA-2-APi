@@ -1,13 +1,11 @@
 package com.jpabook.www.service;
 
 import com.jpabook.www.domain.Member;
-import com.jpabook.www.repository.MemberRepository;
-import org.assertj.core.api.Assertions;
+import com.jpabook.www.repository.MemberRepositoryOld;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,7 +21,7 @@ public class MemberServiceTest {
     @Autowired
     MemberService memberService;
     @Autowired
-    MemberRepository memberRepository;
+    MemberRepositoryOld memberRepository;
     @Autowired
     EntityManager em;
 

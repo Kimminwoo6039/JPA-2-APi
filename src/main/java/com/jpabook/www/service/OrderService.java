@@ -4,10 +4,9 @@ import com.jpabook.www.domain.*;
 import com.jpabook.www.domain.Order;
 import com.jpabook.www.domain.item.Item;
 import com.jpabook.www.repository.ItemRepository;
-import com.jpabook.www.repository.MemberRepository;
+import com.jpabook.www.repository.MemberRepositoryOld;
 import com.jpabook.www.repository.OrderRepository;
 import lombok.RequiredArgsConstructor;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -28,7 +27,7 @@ public class OrderService {
     EntityManager em;
 
     private final OrderRepository orderRepository;
-    private final MemberRepository memberRepository;
+    private final MemberRepositoryOld memberRepository;
     private final ItemRepository itemRepository;
 
     /**
@@ -128,6 +127,6 @@ public class OrderService {
 
         //검색
     public List<Order> findOrders(OrderSearch orderSearch) {
-        return orderRepository.findAll(orderSearch);
+        return orderRepository.findAll1(orderSearch);
     }
 }
